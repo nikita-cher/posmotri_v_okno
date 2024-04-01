@@ -12,10 +12,10 @@ html {
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
+  background: #1b1919;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
-  background-color: #1b1919;
 }
 
 h1,
@@ -23,8 +23,6 @@ h2,
 h3,
 h4,
 p,
-ul,
-ol,
 li,
 blockquote,
 fieldset {
@@ -34,5 +32,7 @@ fieldset {
 
 ul,
 ol {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
