@@ -51,6 +51,7 @@ ol {
   inline-size: 711px;
   block-size: 386px;
   margin-block-end: 16px;
+  position: relative;
 }
 
 .result__video {
@@ -77,6 +78,7 @@ ol {
 .content__list {
   block-size: 298px;
   overflow: auto;
+  position: relative;
 }
 
 .content__list-item:not(:last-of-type) {
