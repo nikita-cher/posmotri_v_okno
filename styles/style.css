@@ -52,6 +52,7 @@ ol {
   block-size: 386px;
   margin-block-end: 16px;
   position: relative;
+  display: flex;
 }
 
 .result__video {
@@ -67,12 +68,31 @@ ol {
   align-items: flex-start;
 }
 
+.search-form__fieldset-title {
+  margin-block-end: 5px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
 .content__details {
   inline-size: 100%;
   block-size: 100%;
   display: flex;
   flex-direction: column;
   gap: 26px;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  line-height: 70px; /* или 94% */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
 }
 
 .content__list {
@@ -85,6 +105,11 @@ ol {
   margin-block-end: 30px;
 }
 
+.content__card-link {
+  color: #fff;
+  text-decoration: none;
+}
+
 .content__video-card {
   display: flex;
   align-items: start;
@@ -92,7 +117,20 @@ ol {
 }
 
 .content__video-card-description-container {
-  inline-size: 100%;
+  flex-grow: 1;
+}
+
+.content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  line-height: 30px; /* или 100% */
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-block-end: 6px;
+}
+
+.content__video-card-description {
+  line-height: 16px; /* или 90% */
 }
 
 .content__video-card-thumbnail {
