@@ -68,11 +68,85 @@ ol {
   align-items: flex-start;
 }
 
+.search-form__fieldset {
+  border: none;
+}
+
 .search-form__fieldset-title {
   margin-block-end: 5px;
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
+}
+
+.search-form__label {
+  width: fit-content;
+  display: flex;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__textfield {
+  inline-size: 225px;
+  block-size: 27px;
+  appearance: none;
+  border: 1px solid #fff;
+  border-inline-start: none;
+  border-inline-end: none;
+  color: #fff;
+  /* opacity: .7; */
+  background: transparent;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.search-form__textfield::placeholder {
+  color: rgb(255, 255, 255 /.7);
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px solid #fff;
+}
+
+.button {
+  block-size: 34px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  inline-size: 194px;
+  align-self: flex-end;
 }
 
 .content__details {
@@ -86,7 +160,7 @@ ol {
 .title {
   font-family: 'Oswald', sans-serif;
   font-size: 75px;
-  line-height: 70px; /* или 94% */
+  line-height: .94;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -123,17 +197,21 @@ ol {
 .content__video-card-title {
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
-  line-height: 30px; /* или 100% */
+  line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
   margin-block-end: 6px;
 }
 
 .content__video-card-description {
-  line-height: 16px; /* или 90% */
+  line-height: .9;
 }
 
 .content__video-card-thumbnail {
   inline-size: 194px;
-  block-size: 103px;
+  min-block-size: 103px;
+}
+
+.more-button {
+  inline-size: 100%;
 }
