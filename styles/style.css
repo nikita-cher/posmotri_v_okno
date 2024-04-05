@@ -63,6 +63,7 @@ ol {
 }
 
 .search-form {
+  padding-block-end: 1px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -82,8 +83,20 @@ ol {
 .search-form__label {
   width: fit-content;
   display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   gap: 5px;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 
 .visually-hidden {
@@ -97,6 +110,7 @@ ol {
 }
 
 .search-form__textfield {
+  box-sizing: border-box;
   inline-size: 225px;
   block-size: 27px;
   appearance: none;
@@ -119,18 +133,37 @@ ol {
   font-weight: 400;
 }
 
+.search-form__textfield:active {
+  border: 1px solid #fff;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
 }
 
 .search-form__pseudo-checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   inline-size: 19px;
   block-size: 19px;
   border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .search-form__checkbox:active + .search-form__pseudo-checkbox:after {
+  content: '';
+  inline-size: 15px;
+  block-size: 15px;
+  background: #fff;
+}
+
+.search-form__label-text {
+  line-height: 0;
 }
 
 .button {
@@ -142,6 +175,24 @@ ol {
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.button:active {
+  background: #545050;
+}
+
+.button:focus {
+  appearance: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__submit-button {
@@ -171,6 +222,8 @@ ol {
 
 .content__list {
   block-size: 298px;
+  padding-inline: 2px;
+  padding-block-end: 2px;
   overflow: auto;
   position: relative;
 }
@@ -213,5 +266,5 @@ ol {
 }
 
 .more-button {
-  inline-size: 100%;
+  inline-size: 399px;
 }
