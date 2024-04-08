@@ -127,7 +127,6 @@ ol {
   border-block-end: 1px solid currentColor;
   background: transparent;
   color: #fff;
-  /* opacity: .7; */
   font-family: inherit;
   font-size: inherit;
   appearance: none;
@@ -228,9 +227,10 @@ ol {
   padding-inline: 2px;
   padding-block-end: 2px;
   overflow: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-block-end: 30px;
 }
 
 .content__card-link {
